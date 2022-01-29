@@ -10,7 +10,7 @@ export const showModal = (main, button, inputs) => {
 
   const heading = document.createElement('h2');
   heading.className = 'modal-heading';
-  heading.appendChild(document.createTextNode('Paczka odebrana'));
+  heading.appendChild(document.createTextNode('Paczka odebrana!'));
 
   const paragraph = document.createElement('p');
   paragraph.className = 'paragraph';

@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+#app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main{
+  display: flex;
+  width: 60%;
+  padding: 36px 0 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0,0,0, 0.7);
+  border-radius: 50px;
+}
+
+.heading{
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 3rem;
+  color: crimson;
+  text-transform: uppercase;
+}
+
+.paragraph{
+  font-size: 1.6rem;
+  line-height: 1.7em;
+  text-align: center;
+  color: yellow;
+}
+
+.form{
+  margin-top: 24px;
+}
+
+.inputs{
+  position: relative;
+  display: flex;
+  margin: 25px 0 5px;
+  max-width: 420px;
+  justify-content: space-between;
+}
+
+.label{
+  flex-basis: 42%;
+  font-size: 1.2rem;
+  color: yellow;
+  text-align: center;
+}
+
+.input{
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 2.6rem;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+
+.button{
+  display: block;
+  margin: 60px auto 0;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+  color: white;
+  background-color: crimson;
+  border: none;
+  border-radius: 50px;
+}
+
+.valid-text{
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  padding: 5px 8px;
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+  background-color: crimson;
+  border-radius: 30px;
+}
+
+.valid-text.active{
+  display: block;
+}
+
+.cover{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  padding: 25px 30px 30px;
+  background-color: rgb(255, 218, 52);
+  border: 1px solid black;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.modal-heading{
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
+}
+
+.modal-button{
+  display: block;
+  flex-basis: 42%;
+  padding: 10px 15px;
+  font-size: 1.6rem;
+  color: white;
+  background-color: crimson;
+  border: none;
+  border-radius: 50px;
+}
+
+.modal .paragraph{
+  color: black;
+}
