@@ -26,8 +26,8 @@ body{
 
 .main{
   display: flex;
-  width: 60%;
-  padding: 36px 0 50px;
+  width: 55%;
+  padding: 60px 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -35,17 +35,29 @@ body{
   border-radius: 50px;
 }
 
+@media screen and (max-width: 550px){
+  .main{
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .main{
+    width: 85%;
+  }
+}
+
 .heading{
-  margin-bottom: 24px;
+  margin-bottom: 50px;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 3.6rem;
   color: crimson;
   text-transform: uppercase;
 }
 
 .paragraph{
-  font-size: 1.6rem;
-  line-height: 1.7em;
+  font-size: 1.8rem;
+  line-height: 1.9em;
   text-align: center;
   color: yellow;
 }
@@ -57,16 +69,30 @@ body{
 .inputs{
   position: relative;
   display: flex;
-  margin: 25px 0 5px;
+  flex-wrap: wrap;
+  margin: 36px 0 0;
   max-width: 420px;
   justify-content: space-between;
 }
 
+@media screen and (max-width: 700px){
+  .inputs{
+    justify-content: center;
+  }
+}
+
 .label{
   flex-basis: 42%;
+  min-width: 170px;
   font-size: 1.2rem;
   color: yellow;
   text-align: center;
+}
+
+@media screen and (max-width: 700px){
+  .label:first-child{
+    margin-bottom: 15px;
+  }
 }
 
 .input{
@@ -83,19 +109,20 @@ body{
 
 .button{
   display: block;
-  margin: 60px auto 0;
+  margin: 100px auto 0;
   padding: 20px 40px;
   font-size: 1.8rem;
   color: white;
   background-color: crimson;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .valid-text{
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 20px);
   left: 0;
   right: 0;
   padding: 5px 8px;
@@ -142,12 +169,20 @@ body{
 
 .buttons{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 32px;
   justify-content: space-between;
 }
 
+@media screen and (max-width: 780px){
+  .buttons{
+    justify-content: center;
+  }
+}
+
 .modal-button{
   display: block;
+  min-width: 140px;
   flex-basis: 42%;
   padding: 10px 15px;
   font-size: 1.6rem;
@@ -155,6 +190,12 @@ body{
   background-color: crimson;
   border: none;
   border-radius: 50px;
+}
+
+@media screen and (max-width: 680px){
+  .modal-button:first-child{
+    margin-bottom: 15px;
+  }
 }
 
 .modal .paragraph{
