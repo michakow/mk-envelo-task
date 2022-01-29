@@ -26,13 +26,21 @@ export const showModal = (main, button, inputs) => {
   buttonFirst.appendChild(document.createTextNode('To wszystko na dziś'));
   buttonSecond.appendChild(document.createTextNode('Odbierz kolejną paczkę'));
 
+  const loader = document.createElement('div');
+  loader.className = 'loader';
+
   buttons.appendChild(buttonFirst);
   buttons.appendChild(buttonSecond);
   modal.appendChild(heading);
   modal.appendChild(paragraph);
   modal.appendChild(buttons);
   main.appendChild(cover);
-  main.appendChild(modal);
+  main.appendChild(loader);
+
+  setTimeout(() =>{
+    loader.remove();
+    main.appendChild(modal);
+  }, 1500)
 
   const handleButtonFirst = () => {
     mainView();
