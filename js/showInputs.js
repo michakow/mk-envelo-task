@@ -1,3 +1,5 @@
+import { showModal } from "./showModal.js";
+
 export const showInputs = (main, button) => {
   const inputs = document.createElement('div');
   inputs.className = 'inputs';
@@ -21,4 +23,11 @@ export const showInputs = (main, button) => {
   inputs.appendChild(labelPhone);
   inputs.appendChild(labelCode);
   main.insertBefore(inputs, button);
+
+  const onShowModal = () => {
+    showModal(main, button, inputs);
+    button.removeEventListener('click', onShowModal);
+  };
+
+  button.addEventListener('click', onShowModal);
 };
